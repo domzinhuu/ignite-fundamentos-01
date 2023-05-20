@@ -4,8 +4,6 @@ import { Post } from "./components/Post";
 import { Sidebar } from "./components/Sidebar";
 import { PostModel } from "./models/posts.model";
 
-
-
 const post: PostModel[] = [
   {
     id: 1,
@@ -39,7 +37,7 @@ function App() {
         <Sidebar />
         <main>
           {post.map((p: PostModel) => (
-            <Post key={p.id} {...p} />
+            <Post key={p.id} post={p} />
           ))}
         </main>
       </div>
